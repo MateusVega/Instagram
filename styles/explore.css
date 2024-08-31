@@ -1,0 +1,31 @@
+main#explore{
+    display: flex;
+    flex-direction: column;
+
+    width: 82%;
+    margin: 35px 0px;
+    margin-left: 18%;
+}
+
+main#explore section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main#explore a{
+    margin: 2px;
+    width: 30%;
+    transition: transform 0.3s;
+    border-radius: 1px;
+}
+
+main#explore a:hover{
+    transform: scale(1.015);
+}
+
+main#explore img{
+    width: 300px;
+    height: 400px;
+    border-radius: 1px;
+}

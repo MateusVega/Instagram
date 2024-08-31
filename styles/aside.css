@@ -1,0 +1,47 @@
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    min-height: 100vh;
+    margin: 30px 50px;
+}
+
+aside #sugestions > p{
+    margin: 20px 0px;
+    color: #929292;
+}
+
+aside .sugestion{
+    display: flex;
+    align-items: center;
+    margin: 12px 0px;
+}
+
+aside .sugestion img{
+    width: 3em;
+    height: 3em;
+    border: 2px solid #838383;
+}
+
+aside .sugestion p{
+    margin-left: 7px;
+}
+
+aside .sugestion a {
+    margin-left: auto;
+    color: rgb(0, 140, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+aside .sugestion a:hover {
+    color: rgb(0, 71, 129);
+}
+
+aside .sugestion a.following {
+    color: #838383;
+}
+
+aside .sugestion a.following:hover {
+    color: #555555;
+}

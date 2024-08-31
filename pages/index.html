@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/aside.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+<body>
+    <div id="black" style="display: none;"></div>
+    <nav>
+        <a href="../pages/index.html" id="logo">Instagram</a>
+        <a href="../pages/index.html" id="home"><span class="material-symbols-outlined">home</span>Inicio</a>
+        <a id="search" onclick="opensearch()"><span class="material-symbols-outlined">search</span>Pesquisar</a>
+        <a href="../pages/explore.html" id="explore"><span class="material-symbols-outlined">explore</span>Explorar</a>
+        <a href="../pages/error.html" id="reels"><span class="material-symbols-outlined">subscriptions</span>Reels</a>
+        <a href="../pages/messages.html" id="messages"><span class="material-symbols-outlined">chat</span>Mensagens</a>
+        <a id="notifications" onclick="opennotif()"><span class="material-symbols-outlined">notifications</span>Notificações</a>
+        <a id="create" onclick="opencreate()"><span class="material-symbols-outlined">add_box</span>Criar</a>
+        <a href="../pages/profile.html" id="profile"><span class="material-symbols-outlined">person</span>Perfil</a>
+        <a href="../pages/error.html" id="more"><span class="material-symbols-outlined">menu</span>Menu</a>
+    </nav>
+    <div id="searchbox" style="display: none;">
+        <h2>Pesquisar</h2>
+        <input type="search" name="search" id="search" placeholder="Pesquisar">
+        <span id="border"></span>
+        <p>Recente</p>
+    </div>
+    <div id="create_post" style="display: none;">
+        <span><span class="material-symbols-outlined" style="color: transparent;">description</span><h1>Criar Posts</h1><a onclick="opencreate()"><span class="material-symbols-outlined">close</span></a></span>
+        <div>
+            <p>Arraste fotos e vídeos aqui</p>
+            <input type="file" id="file">
+            <label for="file" id="filelabel">Carregar arquivos</label>
+            <textarea class="comment-box" placeholder="Descrição" id="describb"></textarea>
+            <button type="button" onclick="post()">Postar</button>
+        </div>
+    </div>
+    <div id="notificationsbar" style="display: none;">
+        <h2>Notificações</h2>
+        <div id="this_month">
+            <p>Esse Mês</p>
+            <div>
+                <img src="https://images.pexels.com/photos/28051896/pexels-photo-28051896/free-photo-of-panorama-vista-paisagem-campo.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Lucas</p>
+                <a id="follow1" onclick="follow(1)">Seguir</a>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/21245316/pexels-photo-21245316/free-photo-of-folhas-cacto-natureza-morta-vaso-de-planta.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Gabriel</p>
+                <a id="follow2" onclick="follow(2)">Seguir</a>
+            </div>
+        </div>
+        <div id="earlier">
+            <p>Recentemente</p>
+            <div>
+                <img src="https://images.pexels.com/photos/27372391/pexels-photo-27372391/free-photo-of-panorama-vista-paisagem-natureza.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Pedro</p>
+                <a id="follow3" onclick="follow(3)">Seguir</a>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/19738061/pexels-photo-19738061/free-photo-of-neve-mar-cidade-meio-urbano.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Maria</p>
+                <a id="follow4" onclick="follow(4)">Seguir</a>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/27077976/pexels-photo-27077976/free-photo-of-comida-alimento-refeicao-mesa.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Ana</p>
+                <a id="follow5" onclick="follow(5)">Seguir</a>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/27668524/pexels-photo-27668524/free-photo-of-mar-praia-litoral-areia.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>João</p>
+                <a id="follow6" onclick="follow(6)">Seguir</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="stories">
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/27035025/pexels-photo-27035025/free-photo-of-yilki-atlari.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Julia</p>
+                </a>
+            </div>
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/27668524/pexels-photo-27668524/free-photo-of-mar-praia-litoral-areia.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Lucas</p>
+                </a>
+            </div>
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/21245316/pexels-photo-21245316/free-photo-of-folhas-cacto-natureza-morta-vaso-de-planta.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Gabriel</p>
+                </a>
+            </div>
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/28051896/pexels-photo-28051896/free-photo-of-panorama-vista-paisagem-campo.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Mariana</p>
+                </a>
+            </div>
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/27077976/pexels-photo-27077976/free-photo-of-comida-alimento-refeicao-mesa.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Felipe</p>
+                </a>
+            </div>
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/19738061/pexels-photo-19738061/free-photo-of-neve-mar-cidade-meio-urbano.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Isabela</p>
+                </a>
+            </div>
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/27668524/pexels-photo-27668524/free-photo-of-mar-praia-litoral-areia.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Vitor</p>
+                </a>
+            </div>
+            <div class="storie">
+                <a href="#">
+                    <img src="https://images.pexels.com/photos/21245316/pexels-photo-21245316/free-photo-of-folhas-cacto-natureza-morta-vaso-de-planta.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Rafaela</p>
+                </a>
+            </div>
+        </section>
+        <section id="posts">
+            <div class="post">
+                <div id="header">
+                    <img src="https://images.pexels.com/photos/28051896/pexels-photo-28051896/free-photo-of-panorama-vista-paisagem-campo.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                    <p>Fernando • 8h</p>
+                    <a href=""><span class="material-symbols-outlined">more_horiz</span></a>
+                </div>
+                <img src="https://images.pexels.com/photos/27035025/pexels-photo-27035025/free-photo-of-yilki-atlari.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+                <div style="display: flex;">
+                    <a><span class="material-symbols-outlined" onclick="curtir()" id="heart">favorite</span></a>
+                    <a><span class="material-symbols-outlined">chat_bubble</span></a>
+                    <a><span class="material-symbols-outlined">share</span></a>
+                    <a style="margin-left: auto;"><span class="material-symbols-outlined">bookmark</span></a>
+                </div>
+                <p class="likes">2547 curtidas</p>
+                <p class="Describe">Cavalos tranquilos em um campo com uma luz suave e difusa, criando uma atmosfera serena. 🐎✨ #Cavalos #Natureza</p>
+                <form>
+                    <textarea id="comments" class="comment-box" placeholder="Adicionar comentário"></textarea>
+                </form>
+
+                <script>
+                    function add_block(texto){
+                        var place = document.getElementsByClassName("post")[0]
+            
+                        var message_block = `
+                            <p><strong>Fernando </strong>  ${texto}</p>
+                        `;
+            
+                        place.innerHTML += message_block;
+                    }
+            
+                    document.getElementById('comments').addEventListener('keydown', function(event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            var msg = this.value;
+                            this.value = "";
+                            add_block(msg);
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+    <aside>
+        <div class="sugestion">
+            <img src="https://images.pexels.com/photos/27668524/pexels-photo-27668524/free-photo-of-mar-praia-litoral-areia.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600&amp;lazy=load" class="profile_grad">
+            <p>Clara</p>
+            <a href="#">Trocar</a>
+        </div>
+        <section id="sugestions">
+            <p>Sugestões para você</p>
+            <div class="sugestion">
+                <img src="https://images.pexels.com/photos/19738061/pexels-photo-19738061/free-photo-of-neve-mar-cidade-meio-urbano.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Lucas</p>
+                <a id="follow7" onclick="follow(7)">Seguir</a>
+            </div>
+            <div class="sugestion">
+                <img src="https://images.pexels.com/photos/27077976/pexels-photo-27077976/free-photo-of-comida-alimento-refeicao-mesa.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Gabriel</p>
+                <a id="follow8" onclick="follow(8)">Seguir</a>
+            </div>
+            <div class="sugestion">
+                <img src="https://images.pexels.com/photos/27668524/pexels-photo-27668524/free-photo-of-mar-praia-litoral-areia.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Pedro</p>
+                <a id="follow9" onclick="follow(9)">Seguir</a>
+            </div>
+            <div class="sugestion">
+                <img src="https://images.pexels.com/photos/21245316/pexels-photo-21245316/free-photo-of-folhas-cacto-natureza-morta-vaso-de-planta.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>Renato</p>
+                <a id="follow10" onclick="follow(10)">Seguir</a>
+            </div>
+            <div class="sugestion">
+                <img src="https://images.pexels.com/photos/28051896/pexels-photo-28051896/free-photo-of-panorama-vista-paisagem-campo.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="profile_grad">
+                <p>João</p>
+                <a id="follow11" onclick="follow(11)">Seguir</a>
+            </div>
+            <footer>
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Pressione</a>
+                <a href="#">API</a>
+                <a href="#">Empregos</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">Locais</a>
+                <a href="#">Idioma</a>
+                <a href="#">Meta verificada</a>
+                <p>© 2024 INSTAGRAM BY MATEUSVEGA</p>
+            </footer>
+        </section>
+    </aside>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Insta;
+    src: url("../fonts/Instagram\ Sans.ttf");
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Insta;
+    color: black;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    cursor: pointer;
+}
+
+#black{
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}

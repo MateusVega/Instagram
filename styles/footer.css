@@ -1,0 +1,20 @@
+footer{
+    margin-top: 50px;
+}
+
+footer *{
+    color: #a3a3a3;
+    font-size: 0.8em;
+}
+
+footer a{
+    margin-right: 3px;
+}
+
+footer a:hover{
+    color: #5a5a5a;
+}
+
+footer p{
+    margin-top: 20px;
+}

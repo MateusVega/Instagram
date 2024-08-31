@@ -1,0 +1,225 @@
+@font-face {
+    font-family: Insta2;
+    src: url("../fonts/Instagram\ Sans\ Headline.otf");
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 18%;
+    height: 100vh;
+    background-color: #ffff;
+    border-right: 1px solid #d9d9d9;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    padding-left: 16px;
+    font-size: 1em;
+}
+
+nav a:not(:first-child):hover{
+    background-color: #e9e8e8;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+nav a:not(:first-child):hover span{
+    transition: 0.5s;
+    font-weight: bolder;
+}
+
+nav #logo{
+    font-family: Insta2;
+    font-size: 2em;
+    height: 12vh;
+}
+
+nav .material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 7px;
+    font-variation-settings: 'FILL' 0;
+}
+
+#searchbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 5px;
+    position: fixed;
+    left: 18.1%;
+    width: 30%;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #d9d9d9;
+}
+
+#searchbox h2{
+    margin: 20px 0px 0px 20px;
+}
+
+#searchbox input{
+    margin: 20px auto;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #e6e6e6;
+    padding: 5px;
+}
+
+#searchbox #border{
+    margin: 20px 0px;
+    border-top: 1px solid #d9d9d9;
+}
+
+#searchbox p{
+    margin: 5px 0px 0px 20px;
+    font-size: 1.1em;
+}
+
+#notificationsbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 5px;
+    position: fixed;
+    left: 18.1%;
+    width: 30%;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #d9d9d9;
+}
+
+#notificationsbar h2{
+    margin: 20px 0px;
+}
+
+#notificationsbar img{
+    width: 3em;
+    height: 3em;
+    border: 2px solid #838383;
+    margin-right: 10px;
+}
+
+#notificationsbar > div > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 18px 0px;
+}
+
+#notificationsbar > div > div p{
+    font-size: 1.3em;
+}
+
+#notificationsbar > div > div a {
+    margin-left: auto;
+    margin-right: 20px;
+    color: rgb(0, 140, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#notificationsbar > div > div a:hover {
+    color: rgb(0, 71, 129);
+}
+
+#notificationsbar > div > div a.following {
+    color: #838383;
+}
+
+#notificationsbar > div > div a.following:hover {
+    color: #555555;
+}
+
+
+#notificationsbar {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 0px 20px;
+}
+
+#notificationsbar div >p{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 10px 0px
+}
+
+#create_post{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 30vw;
+    height: 35vw;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #d9d9d9;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#create_post > span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+#create_post .material-symbols-outlined {
+    font-size: 30px;
+    margin-right: 7px;
+}
+
+#create_post h1{
+    font-size: 1.2em;
+    margin: 10px auto;
+    padding: 5px;
+    text-align: center;
+}
+
+#create_post div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50%;
+}
+
+#create_post div *{
+    margin: 20px 0px;
+}
+
+#create_post p{
+    font-size: 1.7em;
+    text-align: center;
+}
+
+#create_post input{
+    display: none;
+}
+
+#create_post #filelabel{
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#create_post #filelabel:hover{
+    background-color: white;
+    color: rgb(0, 140, 255);
+    border: 1px solid rgb(0, 140, 255);
+}
+
+#create_post button{
+    height: 30px;
+}
